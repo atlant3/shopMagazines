@@ -22,7 +22,7 @@ public class BucketServiceImpl implements BucketService {
 		}
 	}
 
-	public static BucketService getBucketServive() {
+	public static BucketService getBucketService() {
 		if (bucketServiceImpl == null) {
 			bucketServiceImpl = new BucketServiceImpl();
 		}
@@ -31,13 +31,11 @@ public class BucketServiceImpl implements BucketService {
 
 	@Override
 	public Bucket create(Bucket t) {
-		// TODO Auto-generated method stub
-		return null;
+		return bucketDao.create(t);
 	}
 
 	@Override
 	public Bucket read(Integer id) {
-		// TODO Auto-generated method stub
 		return bucketDao.read(id);
 	}
 

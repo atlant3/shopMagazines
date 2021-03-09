@@ -52,7 +52,7 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<Product> readAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return productDao.readAll();
 	}
 
 }

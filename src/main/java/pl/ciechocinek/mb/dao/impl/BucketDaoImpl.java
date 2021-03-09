@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +16,8 @@ import pl.ciechocinek.mb.domain.Bucket;
 import pl.ciechocinek.mb.utils.ConnectionUtils;
 
 public class BucketDaoImpl implements BucketDao {
-	private String generatedColumns[] = { "id" };
 	private static String READ_ALL = "select * from bucket";
-	private static String CREATE = "insert into bucket( user_id, product_id, purchase_date) values(?,?,?)";
+	private static String CREATE = "insert into bucket(user_id, product_id, purchase_date) values(?,?,?)";
 	private static String READ_BY_ID = "select * from bucket where id = ?";
 	private static String DELETE_BY_ID = "delete from bucket where id=?";
 
@@ -33,15 +33,15 @@ public class BucketDaoImpl implements BucketDao {
 	@Override
 	public Bucket create(Bucket t) {
 		try {
-			preparedStatement = connection.prepareStatement(CREATE, generatedColumns);
+			preparedStatement = connection.prepareStatement(CREATE, Statement.RETURN_GENERATED_KEYS);
 			preparedStatement.setInt(1, t.getUserId());
 			preparedStatement.setInt(2, t.getProductId());
-			preparedStatement.setDate(3, (Date) t.getPurchaseDate());
+			preparedStatement.setDate(3, new Date(t.getPurchaseDate().getTime()));
 			preparedStatement.executeUpdate();
 			ResultSet rs = preparedStatement.getGeneratedKeys();
 			rs.next();
 			t.setId(rs.getInt(1));
-			LOG.info("Add a new Bucket " + t.getUserId().toString());
+			LOG.info("Add a new Bucket  " + t.getUserId().toString());
 		} catch (SQLException e) {
 			LOG.error(e);
 		}

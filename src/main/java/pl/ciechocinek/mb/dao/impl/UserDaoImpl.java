@@ -42,8 +42,6 @@ public class UserDaoImpl implements UserDao {
 			preparedStatement.setString(4, t.getRole());
 			preparedStatement.setString(5, t.getPassword());
 			preparedStatement.executeUpdate();
-			System.out.print(t.toString());
-			System.out.print("OK");
 			ResultSet rs = preparedStatement.getGeneratedKeys();
 			rs.next();
 			t.setId(rs.getInt(1));

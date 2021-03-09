@@ -1,3 +1,4 @@
-2021-03-08 19:44:41 INFO  UserDaoImpl:25 - OK a
-2021-03-08 19:44:41 INFO  UserDaoImpl:45 - Add a new Product test
-2021-03-08 19:44:41 INFO  UserDaoImpl:32 - OK b
+2021-03-09 12:41:29 INFO  UserDaoImpl:44 - Add a new Bucket  17
+2021-03-09 12:41:29 INFO  UserDaoImpl:33 - Add a new bucketBucket [id=9, userId=17, productId=3, purchaseDate=Tue Mar 09 12:41:29 CET 2021]
+2021-03-09 12:49:47 INFO  UserDaoImpl:94 - Read by Email maks
+2021-03-09 12:49:47 INFO  UserDaoImpl:53 - SET ATR LOGINmaksmakscabinet.jspmaks

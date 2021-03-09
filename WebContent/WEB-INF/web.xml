@@ -39,4 +39,21 @@
 		<servlet-name>logout</servlet-name>
 		<url-pattern>/logout</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>products</servlet-name>
+		<servlet-class>pl.ciechocinek.mb.servlet.Products</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>products</servlet-name>
+		<url-pattern>/products</url-pattern>
+	</servlet-mapping>
+		<servlet>
+		<servlet-name>bucket</servlet-name>
+		<servlet-class>pl.ciechocinek.mb.servlet.BucketController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bucket</servlet-name>
+		<url-pattern>/bucket</url-pattern>
+	</servlet-mapping>
+	
 </web-app>
