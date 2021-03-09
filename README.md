@@ -1,0 +1,2 @@
+# shopMagazines
+My first project
