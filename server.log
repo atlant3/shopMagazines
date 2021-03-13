@@ -1,0 +1,5 @@
+2021-03-13 23:54:48 INFO  UserDaoImpl:44 - Add a new Bucket  36
+2021-03-13 23:54:48 INFO  UserDaoImpl:32 - Add a new bucketBucket [id=13, userId=36, productId=4, purchaseDate=Sat Mar 13 23:54:48 CET 2021]
+2021-03-13 23:55:06 INFO  UserDaoImpl:44 - Add a new Bucket  36
+2021-03-13 23:55:06 INFO  UserDaoImpl:32 - Add a new bucketBucket [id=14, userId=36, productId=4, purchaseDate=Sat Mar 13 23:55:06 CET 2021]
+2021-03-13 23:55:16 INFO  UserDaoImpl:82 - Delete bucket by ID 12
